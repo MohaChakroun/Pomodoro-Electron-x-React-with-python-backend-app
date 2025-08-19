@@ -25,23 +25,23 @@ I am aiming to make a full on webapp that is a flask Python server communicating
 
 working:
 
-getip - gets the ip
-sendimage - sends an image
-getscreenshot - gets a screenshot
-getwebcam - gets a picture with the webcam
-sendalert - sends a fake alert (sendalert/nameofwindow/context)
+#getip - gets the ip
+#sendimage - sends an image
+#getscreenshot - gets a screenshot
+#getwebcam - gets a picture with the webcam
+#sendalert - sends a fake alert (sendalert/nameofwindow/context)
 
 these don't work yet :
 
-sendbeep - sends a high frequency beep
-bsod - blue screen of death (fake one )
-NoMouse - Blocks Mouse movement
-NoKeyboard - Blocks all keyboard inputs
-killmode - Bsod + beeps + nomouse + LIVE REACTION WEBCAM PIC(do this if you hate the person lol (harmless all fake functions) )
+#sendbeep - sends a high frequency beep
+#bsod - blue screen of death (fake one )
+#NoMouse - Blocks Mouse movement
+#NoKeyboard - Blocks all keyboard inputs
+#killmode - Bsod + beeps + nomouse + LIVE REACTION WEBCAM PIC(do this if you hate the person lol (harmless all fake functions) )
 
 to add:
 
-Jumpscare X - Jumpscares the user (x is the number so we can add multiple jumpscares ps: might change it to any picture I choose instead)
-PlaySound - choose a sound to play on the client's pc
+#Jumpscare X - Jumpscares the user (x is the number so we can add multiple jumpscares ps: might change it to any picture I choose instead)
+#PlaySound - choose a sound to play on the client's pc
 
 And yea this is all of it, hope you like it. It's nothing much, but it's still something :D.
