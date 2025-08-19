@@ -8,10 +8,11 @@ const { ipcRenderer } = window.require("electron");
 
 
 const PomodoroUI = () => {
+ const [minutesLeft, setMinutesLeft] = useState(null);
 
   const testit = () => {
-  alert("Button works!");
-};
+    alert("Button works!");
+  };
 
   const handleClick = (type) => {
     if (type === 1) {
@@ -19,32 +20,26 @@ const PomodoroUI = () => {
     } else if (type === 2) {
       ipcRenderer.send("run-python", "start_45m");
     } else if (type === 3) {
-      ipcRenderer.send("run-python", "start_20m");
+      ipcRenderer.send("run-python", "pause");
     }
   };
 
-const stopTimer = () => {
+  const stopTimer = () => {
     ipcRenderer.send("run-python", "stop");
     setMinutesLeft(null); // reset display when stopping
   };
 
-useEffect(() => {
+  useEffect(() => {
     ipcRenderer.on("python-response", (_, msg) => {
       console.log("Python says:", msg);
-      // If msg is a number, update state
       const mins = parseInt(msg);
       if (!isNaN(mins)) setMinutesLeft(mins);
     });
 
-    // Cleanup listener when component unmounts
     return () => {
       ipcRenderer.removeAllListeners("python-response");
     };
   }, []);
-
-  
-
-
   return (
     <div className="mop">
       {/* Menu Button */}
@@ -131,7 +126,7 @@ useEffect(() => {
           whileTap={{
             scale: 0.98 // Slight press effect
           }}
-          onClick={() => handleClick(1)}
+          onClick={() => handleClick(3)}
           
           >
           
@@ -139,6 +134,12 @@ useEffect(() => {
 
               
           <ellipse className="MainBut-shape" rx="92" ry="88" cx="92" cy="88" />
+          {/* Display remaining minutes on top */}
+          {minutesLeft !== null && (
+            <text x="92" y="92" textAnchor="middle" dominantBaseline="middle" fill="#fff" fontSize="24">
+              {minutesLeft}m
+            </text>
+          )}
         </motion.svg>
       </button>
 
