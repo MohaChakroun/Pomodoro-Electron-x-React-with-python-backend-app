@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Pomodoro ReactJs x ElectronJs app (with python as a backend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I made this project for the sole purpose of just learning how to integrate React, Electron and python together in an app.
 
-## Available Scripts
+## React Role
 
-In the project directory, you can run:
+React just draws the UI, I used AdobeXD to draw it and make a concept, then tried exporting a web element from that UI, trimmed it from useless things (like random scripts), optimized the CSS and made it into it's own file, then created motions to make click animations and background animations.
 
-### `npm start`
+## Electron Role
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Electron made things very tricky since operating it with React was not very straight forward, I used a bunch of libraries that I will not bother noting here and will all be available in the Package.json file in the project.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Python Role
 
-### `npm test`
+As much as python was not needed at all in this project, since I could easily just write the functions code directly in React, I still wanted to expirement with using python as a backend, I tried to use websockets first, which ended very badly, then used python-shell in react which made things very easy. I am definitely expanding on this idea, since I wanna learn FastAPI and more python libraries that are more high leveled. Additionally, I will be working on a project that requiress C++ , React & Electron !!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## The idea
 
-### `npm run build`
+This is a simple pomodoro app that calculates time and sends it back to react to get displayed on electron. The main file contains threads that allow me to stop them, pause them and manipulate them at will. I will be adding a menu, with settings , themes and music aswell as sound effects, with customizeable time intervalls, break times in a loop (in python obv). In react, I will just animate the menu, my idea is to create a conccept again on adobeXD then using that I will export it as usual, integrate it into React and animate using bodymovin an AfterEffects Extension and export it as a lottie animation.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## For Future references
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This is my first official github project, This project was made as a fun project to get the basics of react, motion/react, electron, integrating python to webapps as a backend language, APIs and communication between clients and server (Basically simulating as if python was on a different network using websockets and flask, which was not featured in this project).
+I am aiming to make a full on webapp that is a flask Python server communicating with clients, which will be a base for a lot of different apps mainly a chatting app between me and my friends, a remote access app etc... I already have that app made as a joke app between me and my friend but without UI, including features like :
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+working:
 
-### `npm run eject`
+getip - gets the ip
+sendimage - sends an image
+getscreenshot - gets a screenshot
+getwebcam - gets a picture with the webcam
+sendalert - sends a fake alert (sendalert/nameofwindow/context)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+these don't work yet :
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+sendbeep - sends a high frequency beep
+bsod - blue screen of death (fake one )
+NoMouse - Blocks Mouse movement
+NoKeyboard - Blocks all keyboard inputs
+killmode - Bsod + beeps + nomouse + LIVE REACTION WEBCAM PIC(do this if you hate the person lol (harmless all fake functions) )
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+to add:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Jumpscare X - Jumpscares the user (x is the number so we can add multiple jumpscares ps: might change it to any picture I choose instead)
+PlaySound - choose a sound to play on the client's pc
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+And yea this is all of it, hope you like it. It's nothing much, but it's still something :D.
