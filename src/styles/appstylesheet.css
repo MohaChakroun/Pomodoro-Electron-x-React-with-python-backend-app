@@ -1,0 +1,247 @@
+.mop {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  background-color: rgba(0, 26, 49, 1);
+  overflow: hidden;
+}
+
+/* Menu Styles */
+.menu {
+  position: absolute;
+  width: 32px;
+  height: 30px;
+  left: 5px;
+  top: 10px;
+  overflow: visible;
+  visibility: visible;
+  z-index: 0;
+  pointer-events: all;
+}
+
+.MenuButton{
+	visibility: visible;
+	width: 32px;
+  height: 30px;
+  left: 5px;
+  top: 10px;
+}
+
+.IamErect, .Rect1, .Rect {
+  position: absolute;
+  overflow: visible;
+  pointer-events: none;
+  width: 32px;
+  height: 8px;
+  left: 0px;
+  z-index: 1;
+}
+
+.IamErect {
+  top: 0px;
+}
+.Rect {
+  top: 11px;
+}
+.Rect1 {
+  top: 22px;
+}
+
+.IamErect-shape, .Rect1-shape, .Rect-shape {
+  fill: rgba(255, 255, 255, 1);
+}
+
+/* Background Styles */
+.Back {
+  position: absolute;
+  width: 611px;
+  height: 611px;
+  left: -105px;
+  top: 10px;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.back1 {
+  position: absolute;
+  overflow: visible;
+  width: 611px;
+  height: 272px;
+  left: 0px;
+  top: 339px;
+}
+
+.back1-shape {
+  fill: rgba(11, 74, 1, 1);
+  stroke: rgba(112, 112, 112, 1);
+  stroke-width: 1px;
+}
+
+/* Main Button Styles */
+.MainBut {
+  position: absolute;
+  overflow: visible;
+  width: 184px;
+  height: 176px;
+  left: 108px;
+  top: 134px;
+  visibility: visible;
+}
+
+.MainBut-shape {
+  fill: rgba(25, 37, 121, 1);
+  stroke: rgba(255, 255, 255, 1);
+  stroke-width: 1px;
+}
+
+
+.MainButton{
+	visibility: hidden;
+	width: 184px;
+  	height: 176px;
+  	left: 108px;
+  	top: 134px;
+}
+
+/* Control Buttons */
+.n_5_button, .stop_button, .n_0_button {
+  position: absolute;
+  width: 95px;
+  height: 63px;
+  overflow: visible;
+}
+
+.n_5_button { left: 12px; top: 427px; }
+.stop_button { left: 153px; top: 396px; }
+.n_0_button { left: 294px; top: 427px; }
+
+.Rectangle865-shape, .Rectangle123-shape {
+  fill: rgba(25, 37, 121, 1);
+  stroke: rgba(255, 255, 255, 1);
+  stroke-width: 1px;
+}
+
+.Rectangle32-shape {
+  fill: rgba(121, 25, 25, 1);
+  stroke: rgba(255, 255, 255, 1);
+  stroke-width: 1px;
+}
+
+.n_5m, .STOP, .n_0m {
+  position: absolute;
+  overflow: visible;
+  width: 42px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.n_5m { left: 27px; top: 18px; }
+.STOP { left: 23px; top: 18px; width: 51px; }
+.n_0m { left: 27px; top: 18px; }
+
+.Ellipse13-shape {
+	fill: rgba(255,255,255,1);
+}
+.Ellipse13 {
+	position: absolute;
+	overflow: visible;
+	width: 70px;
+	height: 45px;
+	left: 163px;
+	top: 0px;
+}
+.Ellipse12-shape {
+	fill: rgba(255,255,255,1);
+}
+.Ellipse12 {
+	position: absolute;
+	overflow: visible;
+	width: 78px;
+	height: 47px;
+	left: 196px;
+	top: 0px;
+}
+.Ellipse11-shape {
+	fill: rgba(255,255,255,1);
+}
+.Ellipse11 {
+	position: absolute;
+	overflow: visible;
+	width: 73px;
+	height: 48px;
+	left: 223px;
+	top: 2px;
+}
+.Ellipse23-shape {
+	fill: rgba(255,255,255,1);
+}
+.Ellipse23 {
+	position: absolute;
+	overflow: visible;
+	width: 70px;
+	height: 56px;
+	left: 335px;
+	top: 5px;
+}
+.Ellipse22-shape {
+	fill: rgba(255,255,255,1);
+}
+.Ellipse22 {
+	position: absolute;
+	overflow: visible;
+	width: 78px;
+	height: 47px;
+	left: 360px;
+	top: 10px;
+}
+.cloud21-shape {
+	fill: rgba(255,255,255,1);
+}
+.cloud21 {
+	position: absolute;
+	overflow: visible;
+	width: 73px;
+	height: 50px;
+	left: 395px;
+	top: 5px;
+}
+
+.BackBut-shape {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.BackBut {
+	position: absolute;
+	overflow: visible;
+	width: 187px;
+	height: 170px;
+	left: 212px;
+	top: 127px;
+}
+
+.pause-shape {
+	fill: rgba(25,37,121,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.pause {
+	position: absolute;
+	overflow: visible;
+	width: 220px;
+	height: 217px;
+	left: 195px;
+	top: 103px;
+}
