@@ -9,14 +9,42 @@ timer_thread = None
 def timer(minutes):
     global stop_flag, pause_flag
     remaining = minutes
+    pausedsec = 59
     while remaining > 0:
         if stop_flag:
             print("Timer stopped", flush=True)
             return
         if not pause_flag:
-            print(remaining, flush=True)  # send remaining minutes
-            remaining -= 1
-        time.sleep(60)
+            if stop_flag:
+                break
+            elif pause_flag:
+                pausedsec = i
+                remaining += 1
+                break
+            elif pausedsec == 59:
+                for i in range(59,-1,-1):
+                    if stop_flag:
+                        break
+                    elif pause_flag:
+                        pausedsec = i
+                        remaining += 1
+                        break
+                    print(remaining,":",i, flush=True)  # send remaining minutes
+                    time.sleep(1)
+                remaining -= 1
+            elif not (pause_flag or stop_flag or pausedsec == 59):
+                    for i in range(pausedsec, -1, -1):
+                        if stop_flag:
+                            print("Stopped The timer !")
+                            break
+                        elif pause_flag:
+                            pausedsec = i
+                            remaining += 1
+                            break
+                        print(remaining,":",i, flush=True)  # send remaining minutes
+                        time.sleep(1)
+
+                    remaining -= 1
     print("1 session down", flush=True)
 
 def handle_command(command):
@@ -26,7 +54,10 @@ def handle_command(command):
         pause_flag = False
         return
     elif command == "pause":
-        pause_flag = True
+        if pause_flag :
+            pause_flag = False
+        elif not pause_flag:
+            pause_flag = True 
         return
     elif command == "resume":
         pause_flag = False

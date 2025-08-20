@@ -32,8 +32,8 @@ const PomodoroUI = () => {
   useEffect(() => {
     ipcRenderer.on("python-response", (_, msg) => {
       console.log("Python says:", msg);
-      const mins = parseInt(msg);
-      if (!isNaN(mins)) setMinutesLeft(mins);
+      const mins = msg;
+      if (!((mins) == "")) setMinutesLeft(mins);
     });
 
     return () => {
@@ -136,8 +136,8 @@ const PomodoroUI = () => {
           <ellipse className="MainBut-shape" rx="92" ry="88" cx="92" cy="88" />
           {/* Display remaining minutes on top */}
           {minutesLeft !== null && (
-            <text x="92" y="92" textAnchor="middle" dominantBaseline="middle" fill="#fff" fontSize="24">
-              {minutesLeft}m
+            <text className="MainButText" x="92" y="92" textAnchor="middle" dominantBaseline="middle" fill="#fff" fontSize="24">
+              {minutesLeft}
             </text>
           )}
         </motion.svg>
