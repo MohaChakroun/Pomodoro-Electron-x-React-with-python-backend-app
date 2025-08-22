@@ -35,7 +35,6 @@ def timer(minutes):
             elif not (pause_flag or stop_flag or pausedsec == 59):
                     for i in range(pausedsec, -1, -1):
                         if stop_flag:
-                            print("Stopped The timer !")
                             break
                         elif pause_flag:
                             pausedsec = i
