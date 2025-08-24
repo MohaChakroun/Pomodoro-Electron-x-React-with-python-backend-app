@@ -14,6 +14,7 @@ const PomodoroUI = () => {
     alert("Button works!");
   };
 
+
   const handleClick = (type) => {
     if (type === 1) {
       ipcRenderer.send("run-python", "start_25m");
@@ -23,6 +24,8 @@ const PomodoroUI = () => {
       ipcRenderer.send("run-python", "pause");
     }
   };
+  
+  
 
   const stopTimer = () => {
     ipcRenderer.send("run-python", "stop");
